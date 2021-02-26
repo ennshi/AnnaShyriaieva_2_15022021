@@ -1,6 +1,145 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+:root {
+  --primary: #0065FC;
+  --primary-light: #DEEBFF;
+  --secondary: #F2F2F2;
+}
 
 html,
 body {
   font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*header and navbar*/
+
+.header__logo {
+  position: relative;
+  width: 30vw;
+  margin-left: 10px;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+}
+
+.navbar__list,
+.navbar__inscription,
+.header__logo,
+.navbar__list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__inscription,
+.header__logo {
+  height: 79px;
+}
+
+.navbar__inscription {
+  margin-right: 16px;
+  font-weight: bold;
+}
+
+.navbar__list-item a {
+  color: #000;
+}
+
+.navbar__inscription a,
+.navbar__list-item a:focus,
+.navbar__list-item a:hover {
+  color: var(--primary);
+}
+
+.navbar__list-item {
+  width: 50vw;
+  height: 41px;
+  box-sizing: border-box;
+  border-bottom: 2px var(--secondary) solid;
+}
+
+.navbar__list-item:hover {
+  border-bottom: 2px var(--primary) solid;
+}
+
+@media only screen and (min-width: 576px) {
+  
+  /*header and navbar*/
+  
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+  }
+  
+  .header__logo {
+    width: 115px;
+    margin-left: 20px;
+  }
+  
+  .navbar__container {
+    position: static;
+  }
+  
+  .navbar__inscription {
+    order: 2;
+    width: 119px;
+    box-sizing: border-box;
+  }
+  
+  .navbar__list {
+    order: 1;
+  }
+  
+  .navbar__list-item {
+    border-bottom: none;
+  }
+  
+  .navbar__list-item:first-child {
+    width: 162px;
+  }
+  
+  .navbar__list-item:nth-child(2) {
+    width: 102px;
+  }
+  
+  .navbar__list,
+  .navbar__inscription,
+  .navbar__list-item,
+  .header__logo {
+    height: 100%;
+  }
+  
+  .navbar__list-item:hover,
+  .navbar__inscription:hover {
+    border-bottom: 2px white solid;
+    border-top: 2px var(--primary) solid;
+  }
+}
+
+@media only screen and (min-width: 768px)  {
+  
+  /*header and navbar*/
+  
+  .header__container {
+    height: 114px;
+    margin-left: 44px;
+  }
 }
