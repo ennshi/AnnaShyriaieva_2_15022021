@@ -11,6 +11,7 @@ body {
   font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 ul {
@@ -36,6 +37,8 @@ a {
   justify-content: flex-end;
   flex-wrap: wrap;
   position: absolute;
+  width: 100%;
+  box-sizing: border-box;
   top: 0;
 }
 
@@ -84,7 +87,7 @@ a {
 .footer__container {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   background-color: var(--secondary);
   padding-bottom: 5px;
   padding-top: 20px;
@@ -92,7 +95,7 @@ a {
 }
 
 .footer__block {
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
   padding: 20px 0 20px 23px;
 }
