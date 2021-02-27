@@ -9,75 +9,121 @@
     <script src="https://kit.fontawesome.com/a915338d04.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header__container">
-        <div class="header__logo">
-            <img src="./assets/images/logo/Reservia.svg" alt="reservia logo"/>
+<header class="header__container">
+    <h1 class="header__logo">
+        <img src="./assets/images/logo/Reservia.svg" alt="Reservia"/>
+    </h1>
+    <nav class="navbar__container">
+        <div class="navbar__inscription">
+            <a href="#">S'inscrire</a>
         </div>
-        <nav class="navbar__container">
-            <div class="navbar__inscription">
-                <a href="#">S'inscrire</a>
-            </div>
-            <ul class="navbar__list">
-                <li class="navbar__list-item">
-                    <a href="#hebergements">Hébergements</a>
-                </li>
-                <li class="navbar__list-item">
-                    <a href="#activites">Activités</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
+        <ul class="navbar__list">
+            <li class="navbar__list-item">
+                <a href="#hebergements">Hébergements</a>
+            </li>
+            <li class="navbar__list-item">
+                <a href="#activites">Activités</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main__container">
+    <section class="subsection__container">
+        <header class="subsection__header">
+            <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
+            <h3>En plein centre ville ou en plein nature</h3>
+        </header>
+        <section class="search-bar__container">
 
         </section>
-        <section>
+        <section class="filter-block__container">
+            <h4>Filtres</h4>
 
         </section>
-        <section id="hebergements">
+        <p>Plus de 500 logements sont disponibles dans cette ville</p>
+    </section>
+    <section class="subsection__container subsection__container--30">
+        <header class="subsection__header subsection__header--icon">
+            <h2>Les plus populaires</h2>
+            <i class="fas fa-chart-line"></i>
+        </header>
+        <section class="card-list card-list--flex">
+            <article class="card">
+                <section class="card__media">
+                    <img
+                        src="assets/images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
+                        alt=""
+                    />
+                </section>
+                <section class="card__body">
+                    <h3 class="card__heading"></h3>
+                    <section class="card__rating-block">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </section>
+                </section>
+            </article>
+        </section>
+    </section>
+    <section id="hebergements" class="subsection__container subsection__container--60">
+        <header class="subsection__header">
+            <h2>Hébergements à Marseille</h2>
+        </header>
+        <section class="card-list card-list--flex">
+            <article class="card card--squared">
 
+            </article>
         </section>
-        <section id="activites">
-
+    </section>
+    <section id="activites" class="subsection__container subsection__container--100">
+        <header class="subsection__header">
+            <h2>Activités à Marseille</h2>
+        </header>
+        <section class="card-list card-list--grid">
+            <figure class="card card--vertical"></figure>
         </section>
-    </main>
-    <footer class="footer__container">
-        <section class="footer__block">
-            <h4 class="footer__block__header">A propos</h4>
-            <ul class="footer__block__list">
-                <li class="footer__block__list-item">
-                    <a href="#">Fonctionnement du site</a>
-                </li>
-                <li class="footer__block__list-item">
-                    <a href="#">Conditions générales de vente</a>
-                </li>
-                <li class="footer__block__list-item">
-                    <a href="#">Données et confidentialité</a>
-                </li>
-            </ul>
-        </section>
-        <section class="footer__block">
-            <h4 class="footer__block__header">Nos hébergements</h4>
-            <ul class="footer__block__list">
-                <li class="footer__block__list-item">
-                    <a href="#">Charte qualité</a>
-                </li>
-                <li class="footer__block__list-item">
-                    <a href="#">Soumettre votre hôtel</a>
-                </li>
-            </ul>
-        </section>
-        <section class="footer__block">
-            <h4 class="footer__block__header">Assistance</h4>
-            <ul class="footer__block__list">
-                <li class="footer__block__list-item">
-                    <a href="#">Centre d'aide</a>
-                </li>
-                <li class="footer__block__list-item">
-                    <a href="#">Nous contacter</a>
-                </li>
-            </ul>
-        </section>
-    </footer>
+    </section>
+</main>
+<footer class="footer__container">
+    <section class="footer__block">
+        <h4 class="footer__block__header">A propos</h4>
+        <ul class="footer__block__list">
+            <li class="footer__block__list-item">
+                <a href="#">Fonctionnement du site</a>
+            </li>
+            <li class="footer__block__list-item">
+                <a href="#">Conditions générales de vente</a>
+            </li>
+            <li class="footer__block__list-item">
+                <a href="#">Données et confidentialité</a>
+            </li>
+        </ul>
+    </section>
+    <section class="footer__block">
+        <h4 class="footer__block__header">Nos hébergements</h4>
+        <ul class="footer__block__list">
+            <li class="footer__block__list-item">
+                <a href="#">Charte qualité</a>
+            </li>
+            <li class="footer__block__list-item">
+                <a href="#">Soumettre votre hôtel</a>
+            </li>
+        </ul>
+    </section>
+    <section class="footer__block">
+        <h4 class="footer__block__header">Assistance</h4>
+        <ul class="footer__block__list">
+            <li class="footer__block__list-item">
+                <a href="#">Centre d'aide</a>
+            </li>
+            <li class="footer__block__list-item">
+                <a href="#">Nous contacter</a>
+            </li>
+        </ul>
+    </section>
+</footer>
 </body>
 </html>
