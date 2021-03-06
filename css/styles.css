@@ -155,7 +155,14 @@ figure {
 .card {
   border-radius: 15px;
   background-color: #fff;
-  margin: 5px 0;
+  margin: 7px 0;
+  box-shadow: 1px 1px 10px #cbcbcb;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.card:hover {
+  opacity: 0.6;
 }
 
 .card--media-on-side {
@@ -232,7 +239,7 @@ figure {
 
 .card--squared .card__heading,
 .card--squared .card__info {
-  margin: 0 0 5px 0;
+  margin: 0 0 4px 0;
 }
 
 .card__rating-block {
@@ -242,7 +249,7 @@ figure {
 }
 
 .card--squared .card__body {
-  margin: 5px 10px;
+  margin: 2px 10px 0 10px;
 }
 
 .card-list__wrapper {
@@ -259,6 +266,8 @@ figure {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   margin-top: 0;
+  display: flex;
+  align-items: center;
   height: 58px;
   background-color: #fff;
   padding-left: 10px;
@@ -401,14 +410,27 @@ figure {
     height: 116px;
   }
   
+  .card--squared .card__heading {
+    margin-bottom: 5px;
+  }
+  
+  .card--squared .card__info {
+    margin-bottom: 10px;
+  }
+  
+  .card--squared .card__body {
+    padding: 5px 0;
+  }
+  
   .card-list--grid {
     width: 100%;
     padding: 0 20px;
     display: grid;
     align-items: stretch;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 240px);
+    grid-template-rows: repeat(4, 200px);
     grid-column-gap: 40px;
+    grid-row-gap: 20px;
     grid-template-areas: "f1 f2" "f1 f3" "f4 f6" "f5 f6";
   }
 
@@ -492,6 +514,10 @@ figure {
     margin: 15px 5px;
   }
   
+  .card--grid {
+    margin: 0;
+  }
+  
   .card-list,
   .card-list__wrapper {
     max-width: 996px;
@@ -542,6 +568,7 @@ figure {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 235px 192px;
     grid-column-gap: 40px;
+    grid-row-gap: 20px;
     padding: 0;
   }
   
