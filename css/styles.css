@@ -40,6 +40,13 @@ figure {
   box-sizing: border-box;
 }
 
+button,
+button:focus {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 .main__wrapper {
   width: 100%;
   margin: 0 auto;
@@ -137,6 +144,67 @@ figure {
   width: 300px;
   padding: 0 10px;
   margin: 0 auto;
+}
+
+/* search bar */
+
+.search-bar__container {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  height: 43px;
+  position: relative;
+}
+
+.search-bar__input {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 100%;
+  border: 1px solid var(--secondary);
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 15px;
+}
+
+.search-bar__btn {
+  display: none;
+  height: 100%;
+  width: 131px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.5s ease;
+}
+
+.search-bar__btn--icon {
+  border-radius: 15px;
+  height: 100%;
+  width: 43px;
+  position: absolute;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 1rem;
+  transition: 0.5s ease;
+  right: 0;
+}
+
+.search-bar__btn:hover,
+.search-bar__btn--icon:hover {
+  opacity: 0.6;
+}
+
+/* info-block */
+
+.info-block__container {
+  display: flex;
+  align-items: center;
 }
 
 /* card list and card */
@@ -274,6 +342,44 @@ figure {
   font-weight: bold;
 }
 
+/* chips */
+
+.filter-block__container {
+  display: block;
+}
+
+.filters-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon-chip__container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 25px;
+  border: 2px var(--secondary-darker) solid;
+  width: max-content;
+  padding-right: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin: 6px 13px;
+}
+
+.icon-chip__body {
+  margin-left: 48px;
+}
+
+.icon-chip__container,
+.icon--chip {
+  height: 42px;
+}
+
+.icon-chip__container:hover {
+  color: var(--primary)
+}
+
 /* icons */
 
 .icon--active {
@@ -292,6 +398,42 @@ figure {
   font-size: 0.7rem;
 }
 
+.icon--input-right {
+  height: 100%;
+  width: 50px;
+  color: #000;
+  background-color: var(--secondary);
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.icon--touchable {
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.icon--touchable:hover {
+  opacity: 0.8;
+}
+
+.icon--chip {
+  height: calc(100% + 3px);
+  width: 42px;
+  border-radius:50%;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border: 3px solid var(--primary-light);
+  position: absolute;
+  left: -3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .icon-border--round {
   border-radius: 50%;
   width: 1.1rem;
@@ -300,6 +442,7 @@ figure {
   justify-content: center;
   align-items: center;
   border: 1px solid var(--secondary-darker);
+  margin-right: 10px;
 }
 
 /* footer */
@@ -348,7 +491,7 @@ figure {
   
   .header__logo {
     width: 115px;
-    margin-left: 20px;
+    margin-left: 0;
   }
   
   .navbar__container {
@@ -391,6 +534,31 @@ figure {
   
   .main__container {
     margin-top: 0;
+  }
+  
+  /* search bar */
+  
+  .search-bar {
+    height: 52px;
+  }
+  
+  .search-bar__btn {
+    display: block;
+  }
+  
+  .search-bar__btn--icon {
+    display: none;
+  }
+  
+  .search-bar__input {
+    border-radius: 0;
+  }
+  
+  /* filters */
+  
+  .filter-block__container {
+    display: flex;
+    align-items: flex-start;
   }
   
   /* card list and card */
@@ -485,7 +653,6 @@ figure {
   
   .header__container {
     height: 114px;
-    margin-left: 44px;
   }
   
   /*card-list */
