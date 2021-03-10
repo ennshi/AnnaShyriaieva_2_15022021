@@ -53,6 +53,16 @@ button:focus {
   max-width: 1450px;
 }
 
+/* headings */
+
+.heading--section {
+  font-size: 1.5rem;
+}
+
+.heading--subsection {
+  font-size: 1.3rem;
+}
+
 /*header and navbar*/
 
 .header__logo {
@@ -120,7 +130,7 @@ button:focus {
 
 .main__container {
   max-width: 1600px;
-  margin-top: 41px;
+  margin-top: 76px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -129,7 +139,7 @@ button:focus {
 .subsection__container {
   display: flex;
   flex-direction: column;
-  padding: 5px 10px 20px 10px;
+  padding: 5px 17px 20px 17px;
   margin-bottom: 20px;
 }
 
@@ -141,9 +151,6 @@ button:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 300px;
-  padding: 0 10px;
-  margin: 0 auto;
 }
 
 /* search bar */
@@ -151,6 +158,7 @@ button:focus {
 .search-bar__container {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .search-bar {
@@ -207,6 +215,22 @@ button:focus {
   align-items: center;
 }
 
+/* filters */
+
+.filter-block__container {
+  display: block;
+}
+
+.filters-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter-block__container,
+.search-bar__container,
+.info-block__container {
+  margin-top: 33px;
+}
 /* card list and card */
 
 .card-list {
@@ -218,6 +242,15 @@ button:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.card-list__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-list__btn-container {
+  display: flex;
 }
 
 .card {
@@ -344,15 +377,6 @@ button:focus {
 
 /* chips */
 
-.filter-block__container {
-  display: block;
-}
-
-.filters-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .icon-chip__container {
   display: flex;
   align-items: center;
@@ -364,7 +388,7 @@ button:focus {
   font-weight: bold;
   cursor: pointer;
   transition: all 0.5s ease;
-  margin: 6px 13px;
+  margin: 6px 5px;
 }
 
 .icon-chip__body {
@@ -396,6 +420,10 @@ button:focus {
 
 .icon--small {
   font-size: 0.7rem;
+}
+
+.icon--large {
+  font-size: 1.5rem;
 }
 
 .icon--input-right {
@@ -436,13 +464,23 @@ button:focus {
 
 .icon-border--round {
   border-radius: 50%;
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 1.4rem;
+  height: 1.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid var(--secondary-darker);
   margin-right: 10px;
+}
+
+/* buttons */
+
+.btn--transparent {
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 10px 0;
+  padding: 10px 0;
 }
 
 /* footer */
@@ -536,7 +574,19 @@ button:focus {
     margin-top: 0;
   }
   
+  .subsection__header--icon {
+    justify-content: flex-start;
+  }
+  
+  .subsection__header > i {
+    margin-left: 50px;
+  }
+  
   /* search bar */
+  
+  .search-bar__container {
+    justify-content: flex-start;
+  }
   
   .search-bar {
     height: 52px;
@@ -559,6 +609,12 @@ button:focus {
   .filter-block__container {
     display: flex;
     align-items: flex-start;
+  }
+  
+  .filter-block__container,
+  .search-bar__container,
+  .info-block__container {
+    margin-top: 21px;
   }
   
   /* card list and card */
@@ -629,6 +685,12 @@ button:focus {
   
   .card--grid-6 {
     grid-area: f6;
+  }
+  
+  /* chips */
+  
+  .icon-chip__container {
+    margin: 6px 13px;
   }
   
   /* footer */
@@ -726,6 +788,10 @@ button:focus {
     margin-left: 2.5vw;
   }
   
+  .subsection__header--icon {
+    justify-content: space-between;
+  }
+  
   /* card-list */
   .card-list__wrapper {
     max-width: 100%;
@@ -785,20 +851,6 @@ button:focus {
     grid-row-start: 2;
     grid-row-end: 2;
   }
-}
-
-@media only screen and (min-width: 1400px) {
-  
-  /* main */
-  
-  .subsection__container--right {
-    max-width: 416px;
-  }
-  
-  .subsection__container--left {
-    width: 878px;
-  }
-  
   /*card list and card */
   
   .card--media-on-side {
@@ -814,5 +866,18 @@ button:focus {
   
   .card--media-on-side .card__info {
     margin-bottom: 35px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  
+  /* main */
+  
+  .subsection__container--right {
+    max-width: 416px;
+  }
+  
+  .subsection__container--left {
+    width: 878px;
   }
 }
